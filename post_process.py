@@ -52,8 +52,8 @@ def soft_nms(df, alpha, t1, t2, fps):
 
 
 def video_post_process(meta, model_name, fps=25, alpha=0.4, t1=0.2, t2=0.9):
-    file = meta.file.split("/")[-1]
-    df = pd.read_csv(os.path.join("output", "results", model_name, f"{file}.csv"))
+    file = meta.file.split("/")[-1].replace(".mp4", ".csv")
+    df = pd.read_csv(os.path.join("output", "results", model_name, file))
 
     if len(df) > 1:
         df = soft_nms(df, alpha, t1, t2, fps)

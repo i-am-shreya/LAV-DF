@@ -57,7 +57,7 @@ if __name__ == '__main__':
     trainer = Trainer(log_every_n_steps=50, precision=32, max_epochs=args.max_epochs,
         callbacks=[
             ModelCheckpoint(
-                dirpath=f"./{config['name']}", save_last=True, filename=config["name"] + "-{epoch}-{val_loss:.3f}",
+                dirpath=f"./ckpt/{config['name']}", save_last=True, filename=config["name"] + "-{epoch}-{val_loss:.3f}",
                 monitor="val_fusion_bm_loss", mode="min"
             ),
             LrLogger(),

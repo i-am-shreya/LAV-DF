@@ -24,14 +24,18 @@ if __name__ == '__main__':
     t2 = config["soft_nms"]["t2"]
 
     # prepare dataset
-    dm = LAVDFDataModule(batch_size=1, num_workers=3, get_meta_attr=BATFD.get_meta_attr)
+    dm = LAVDFDataModule(root=args.data_root,
+        frame_padding=config["num_frames"],
+        max_duration=config["max_duration"],
+        batch_size=1, num_workers=3,
+        get_meta_attr=BATFD.get_meta_attr)
     dm.setup()
 
     # prepare model
-    model = BATFD(model_name).load_from_checkpoint(args.checkpoint)
+    model = BATFD.load_from_checkpoint(args.checkpoint)
 
     # inference. save dense proposals as csv file
-    inference_batfd(model_name, model, dm, config["max_duration"])
+    inference_batfd(model_name, model, dm, config["max_duration"], args.gpus)
 
     # post process by soft nms
     metadata = dm.test_dataset.metadata

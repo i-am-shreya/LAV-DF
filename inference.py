@@ -45,7 +45,8 @@ class SaveToCsvCallback(Callback):
         new_df = pd.DataFrame(new_props, columns=col_name)
         new_df["begin"] = new_df["begin"].astype(int)
         new_df["end"] = new_df["end"].astype(int)
-        new_df.to_csv(os.path.join("output", "results", self.model_name, f"{video_name.split('/')[-1]}.csv"),
+        new_df.to_csv(
+            os.path.join("output", "results", self.model_name, video_name.split('/')[-1].replace(".mp4", ".csv")),
             index=False)
 
 
@@ -57,7 +58,7 @@ def inference_batfd(model_name: str, model: LightningModule, dm: LAVDFDataModule
 
     trainer = Trainer(logger=False,
         enable_checkpointing=False, devices=1 if gpus > 1 else None,
-        accelerator="gpu" if gpus > 1 else "cpu",
+        accelerator="gpu" if gpus > 0 else "cpu",
         callbacks=[SaveToCsvCallback(max_duration, test_dataset.metadata, model_name)]
     )
 
