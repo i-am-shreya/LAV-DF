@@ -211,4 +211,4 @@ class LAVDFDataModule(LightningDataModule):
         return DataLoader(self.dev_dataset, batch_size=self.batch_size, num_workers=self.num_workers)
 
     def test_dataloader(self) -> EVAL_DATALOADERS:
-        return DataLoader(self.test_dataset, batch_size=self.batch_size, num_workers=self.num_workers)
+        return DataLoader(self.test_dataset, batch_size=1, num_workers=self.num_workers)

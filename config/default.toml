@@ -26,3 +26,8 @@ modal_bm_loss_weight = 1.0
 contrastive_loss_weight = 0.1
 contrastive_loss_margin = 0.99
 weight_decay = 0.0001
+
+[soft_nms]
+alpha = 0.7234
+t1 = 0.1968
+t2 = 0.4123

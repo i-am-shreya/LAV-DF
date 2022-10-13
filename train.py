@@ -16,7 +16,6 @@ parser.add_argument("--num_workers", type=int, default=8)
 parser.add_argument("--gpus", type=int, default=1)
 parser.add_argument("--num_train", type=int, default=None)
 parser.add_argument("--num_val", type=int, default=1000)
-parser.add_argument("--precision", type=int, default=16)
 parser.add_argument("--max_epochs", type=int, default=500)
 parser.add_argument("--resume", type=str, default=None)
 
@@ -55,7 +54,7 @@ if __name__ == '__main__':
         distributed=args.gpus > 1
     )
 
-    trainer = Trainer(log_every_n_steps=50, precision=args.precision, max_epochs=args.max_epochs,
+    trainer = Trainer(log_every_n_steps=50, precision=32, max_epochs=args.max_epochs,
         callbacks=[
             ModelCheckpoint(
                 dirpath=f"./{config['name']}", save_last=True, filename=config["name"] + "-{epoch}-{val_loss:.3f}",
