@@ -105,8 +105,8 @@ Conv3d = _get_Conv(torch.nn.Conv3d)
 
 
 def iou_with_anchors(anchors_min, anchors_max, box_min, box_max):
-    """Compute jaccard score between a box and the anchors.
-    """
+    """Compute jaccard score between a box and the anchors."""
+
     len_anchors = anchors_max - anchors_min
     int_xmin = np.maximum(anchors_min, box_min)
     int_xmax = np.minimum(anchors_max, box_max)

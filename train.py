@@ -19,7 +19,6 @@ parser.add_argument("--num_val", type=int, default=1000)
 parser.add_argument("--max_epochs", type=int, default=500)
 parser.add_argument("--resume", type=str, default=None)
 
-
 if __name__ == '__main__':
     args = parser.parse_args()
     config = toml.load(args.config)
