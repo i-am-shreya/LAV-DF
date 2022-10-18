@@ -1,8 +1,30 @@
 # Localized Audio Visual DeepFake Dataset (LAV-DF)
 
-<p style="text-align: center">
+<div align="center">
     <img src="assets/overview.svg">
-</p>
+    <p></p>
+</div>
+
+<div align="center">
+    <a href="https://github.com/ControlNet/LAV-DF/issues">
+        <img src="https://img.shields.io/github/issues/ControlNet/LAV-DF?style=flat-square">
+    </a>
+    <a href="https://github.com/ControlNet/LAV-DF/network/members">
+        <img src="https://img.shields.io/github/forks/ControlNet/LAV-DF?style=flat-square">
+    </a>
+    <a href="https://github.com/ControlNet/LAV-DF/stargazers">
+        <img src="https://img.shields.io/github/stars/ControlNet/LAV-DF?style=flat-square">
+    </a>
+    <a href="https://github.com/ControlNet/LAV-DF/blob/master/LICENSE">
+        <img src="https://img.shields.io/github/license/ControlNet/LAV-DF?style=flat-square">
+    </a>
+    <a href="https://arxiv.org/abs/2204.06228">
+        <img src="https://img.shields.io/badge/arXiv-2204.06228-b31b1b.svg?style=flat-square">
+    </a>
+    <a href="https://paperswithcode.com/sota/temporal-forgery-localization-on-lav-df?p=do-you-really-mean-that-content-driven-audio">
+        <img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/do-you-really-mean-that-content-driven-audio/temporal-forgery-localization-on-lav-df&style=flat-square">
+    </a>
+</div>
 
 This repo is the official PyTorch implementation for the paper [Do You Really Mean That? Content Driven Audio-Visual 
 Deepfake Dataset and Multimodal Method for Temporal Forgery Localization](https://arxiv.org/abs/2204.06228).
@@ -31,7 +53,7 @@ This is because we have used the better hyperparameters in this repository.
 
 The main versions are,
 - Python >= 3.7, < 3.11
-- PyTorch > 1.9.0
+- PyTorch >= 1.9.0
 - pytorch_lightning >= 1.7.0
 
 Run the following command to install the required packages.
@@ -57,7 +79,7 @@ The checkpoint will be saved in `ckpt` directory, and the tensorboard log will b
 
 Please run the following command to evaluate the model with the checkpoint saved in `ckpt` directory.
 
-Besides, you can also download the pretrained model from [GitHub Release]().
+Besides, you can also download the pretrained model from [GitHub Release](https://github.com/ControlNet/LAV-DF/releases/download/pretrained_model/baftd_default.ckpt).
 
 ```bash
 python evaluate.py \
