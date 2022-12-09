@@ -34,10 +34,10 @@ if __name__ == '__main__':
     # prepare model
     model = BATFD.load_from_checkpoint(args.checkpoint)
 
-    # inference. save dense proposals as csv file
+    # inference and save dense proposals as csv file
     inference_batfd(model_name, model, dm, config["max_duration"], args.gpus)
 
-    # post process by soft nms
+    # postprocess by soft-nms
     metadata = dm.test_dataset.metadata
     post_process(model_name, metadata, 25, alpha, t1, t2)
     proposals = read_json(f"output/results/{model_name}.json")
