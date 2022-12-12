@@ -54,7 +54,7 @@ This is because we have used the better hyperparameters in this repository.
 The main versions are,
 - Python >= 3.7, < 3.11
 - PyTorch >= 1.9.0
-- pytorch_lightning >= 1.7.0
+- pytorch_lightning == 1.7.*
 
 Run the following command to install the required packages.
 
