@@ -27,8 +27,8 @@
 </div>
 
 This repo is the official PyTorch implementation for the paper [Do You Really Mean That? Content Driven Audio-Visual 
-Deepfake Dataset and Multimodal Method for Temporal Forgery Localization](https://arxiv.org/abs/2204.06228).
-
+Deepfake Dataset and Multimodal Method for Temporal Forgery Localization](https://ieeexplore.ieee.org/document/10034605)
+(Best Award).
 
 ## LAV-DF Dataset
 
@@ -96,11 +96,14 @@ be printed in the console.
 If you find this work useful in your research, please cite it.
 
 ```bibtex
-@article{cai2022you,
+@inproceedings{cai2022you,
   title={Do You Really Mean That? Content Driven Audio-Visual Deepfake Dataset and Multimodal Method for Temporal Forgery Localization},
   author={Cai, Zhixi and Stefanov, Kalin and Dhall, Abhinav and Hayat, Munawar},
-  journal={arXiv preprint arXiv:2204.06228},
-  year={2022}
+  booktitle={2022 International Conference on Digital Image Computing: Techniques and Applications (DICTA)},
+  year={2022},
+  doi={10.1109/DICTA56598.2022.10034605},
+  pages={1--10},
+  address = {Sydney, Australia},
 }
 ```
 
