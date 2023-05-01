@@ -107,7 +107,7 @@ If you find this work useful in your research, please consider citing it.
 }
 ```
 ```bibtex
-@inproceedings{cai2023you,
+@inproceedings{cai2023glitch,
   title={'Glitch in the Matrix!’: A Large Scale Benchmark for Content Driven Audio-Visual Forgery Detection and Localization},
   author={Cai, Zhixi and Ghosh, Shreya and Gedeon, Tom and Dhall, Abhinav and Stefanov, Kalin and Hayat, Munawar},
   year={2023}
