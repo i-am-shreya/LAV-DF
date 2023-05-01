@@ -93,7 +93,7 @@ be printed in the console.
 
 ## References
 
-If you find this work useful in your research, please cite it.
+If you find this work useful in your research, please consider citing it.
 
 ```bibtex
 @inproceedings{cai2022you,
@@ -103,8 +103,15 @@ If you find this work useful in your research, please cite it.
   year={2022},
   doi={10.1109/DICTA56598.2022.10034605},
   pages={1--10},
-  address = {Sydney, Australia},
+  address = {Sydney, Australia}
 }
+```
+```bibtex
+@inproceedings{cai2023you,
+  title={'Glitch in the Matrix!’: A Large Scale Benchmark for Content Driven Audio-Visual Forgery Detection and Localization},
+  author={Cai, Zhixi and Ghosh, Shreya and Gedeon, Tom and Dhall, Abhinav and Stefanov, Kalin and Hayat, Munawar},
+  year={2023}
+  }
 ```
 
 ## Acknowledgements
